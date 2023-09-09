@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator</title>
+</head>
+<body>
+    <h1>ZAKAT Calculator</h1>
+    <form onsubmit="zakat()">
+        <label for="annual_amnt"><b>Annual Amount</b> :</label>
+        <input type="number" name="annual_amnt" id="zakatamnt1" placeholder="Enter Your Annual Amount">
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+<script>
+    function zakat()
+    {
+        let annual_amnt = document.querySelector("#zakatamnt1").value 
+        res = ( annual_amnt / 40 )
+        document.write("Your ZAKAT on Annual Amount Is :" + res)
+        console.log("Your ZAKAT on Annual Amount Is :" + res)
+    }
+zakat()
+</script>
+</html>

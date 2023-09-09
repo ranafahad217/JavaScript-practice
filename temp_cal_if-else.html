@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Calculator</title>
+</head>
+<body>
+    <h1>" Weather Calculator "</h1>
+    <script>
+        let temp = prompt("Enter Temperature");
+
+        function Temperature()
+    {
+        if(temp<0)
+        {
+            alert("Its Extremely Cold Outside");
+            console.log("Its Extremely Cold Outside");
+            document.write("Its Extremely Cold Outside");
+        }
+        else if(temp>=0 && temp<25)
+        {
+            alert("Its Cold Outside");
+            console.log("Its Cold Outside");
+            document.write("Its Cold Outside");
+        }
+        else if(temp>=25 && temp<30)
+        {
+            alert("Its COOL Outside");
+            console.log("Its COOL Outside");
+            document.write("Its COOL Outside");
+        }
+        else if(temp>=30 && temp<45)
+        {
+            alert("Its Hot Outside");
+            console.log("Its Hot Outside");
+            document.write("Its Hot Outside");
+        }
+        else
+        {
+            alert("Its Extremely Hot Outside");
+            console.log("Its Extremely Hot Outside");
+            document.write("Its Extremely Hot Outside");
+        }
+    }   
+    Temperature()
+
+    </script>
+</body>
+</html>

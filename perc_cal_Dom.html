@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise</title>
+</head>
+<body>
+    <h1>" ....Percentage Calculator.... "</h1>
+    <form onsubmit="perc(); return false;">
+        <label for="tm"><b><big> Total Marks :</big></b></label>
+        <input type="number" name="tm" id="tm1" placeholder="Enter Your Total Marks here...">
+        <label for="obtm"><b><big> Obtained Marks :</big></b></label>
+        <input type="number" name="obtm" id="obtm1" placeholder="Enter your Obt. Marks here...">
+        <button type="submit">Submit</button>
+    </form>
+    <ol id="res1"></ol>
+
+    <script>
+        function perc()
+        {
+            let std_total_marks = document.querySelector("#tm1").value;
+            let std_obt_marks = document.querySelector("#obtm1").value;
+            res = (std_obt_marks / std_total_marks ) * 100
+            document.querySelector("#res1").innerHTML=( `<big><b> Dear Fahad,</b></big> <h1> You have Goted <br> ${res} % Marks </h1> `)
+            console.log("you have Got " + res + "%")
+        }
+        
+    </script>
+        </body>
+
+</html>

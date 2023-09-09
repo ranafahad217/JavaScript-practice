@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading Calculator</title>
+</head>
+<body>
+    <h1>" ....Grading Calculator.... "</h1>
+    
+    <form onsubmit="perc2() ; return false ;">
+        <label for="perc"><b><big>Your Pecentage :</big></b></label>
+        <input type="number" name="perc" id="grade" placeholder="Enter Percentage Here...">
+        <button type="submit">Calculate</button>
+    </form>
+    <ol id="res1"></ol>
+
+    <script>
+
+        function perc2()
+        {
+            let perc = document.querySelector("#grade").value ;
+            // var perc = prompt("Enter Your Percentage") ;
+
+            if(perc>=90)
+            {
+                document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" A+ "</b> <br> (Excelent) </big>`)
+            }
+
+                else if(perc<90 && perc>=85)
+                {
+                    document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" A- "</b> <br> (Excelent) </big>`)
+                }
+
+                else if(perc<85 && perc>=80)
+                {
+                    document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" B+ "</b> <br> (Excelent) </big>`)
+                }
+
+                else if(perc<80 && perc>=75)
+                {
+                    document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" B "</b> <br> (Good Effort) </big>`)
+                }
+
+                else if(perc<75 && perc>=70)
+                {
+                    document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" B- "</b> <br> (Good Effort) </big>`)
+                }
+
+                else if(perc<70 && perc>=65)
+                {
+                    document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" C+ "</b> <br> (Good Effort) </big>`)
+                }
+
+                else if(perc<65 && perc>=60)
+                {
+                    document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" C "</b> <br> (Average) </big>`)
+                }
+
+                else if(perc<60 && perc>=55)
+                {
+                    document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" C- "</b> <br> (Average) </big>`)
+                }
+
+                else if(perc<55 && perc>=50)
+                {
+                    document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" D "</b> <br> (Minimum Passing) </big>`)
+                }
+
+            else
+            {
+                document.querySelector("#res1").innerHTML = (`<big> Dear Student, Your Final Grade is <b>" F "</b> <br> (Failing) You need to Repeat your Semester. </big>`)
+            }
+        }
+
+    </script>
+</body>
+</html>

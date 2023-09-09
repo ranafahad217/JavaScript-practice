@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Calculator</title>
+</head>
+<body>
+    <h1>" ....Weather Calculator.... "</h1>
+    <form onsubmit="abc1(); return false ;">
+        <label for="temp"><b><big>Temperature :</big></b></label>
+        <input type="number" name="Temperature" id="temp1" placeholder="Enter Temperature here...">
+        <button type="submit">Calculate</button>
+    </form>
+    <ol id="res1"></ol>
+
+    <script>
+        
+        function abc1()
+    {
+            
+        var temp = document.querySelector("#temp1").value;
+        if(temp<=0)
+        {
+            document.querySelector("#res1").innerHTML = (`<h2> Mr. Fahad : <u> Its Extremely Cold Weather Outside </u> </h2>`);
+        }      
+               
+            else if(temp>0 && temp<=20)
+            {
+                document.querySelector("#res1").innerHTML = (`<h2> Mr. Fahad : <u> Its Cold Weather Outside </u> </h2>`);
+            }
+
+            else if(temp>20 && temp<=30)
+            {
+                document.querySelector("#res1").innerHTML = (`<h2> Mr. Fahad : <u> Its COOL Weather Outside </u> </h2>`);
+            }
+
+            else if(temp>30 && temp<=45)
+            {
+                document.querySelector("#res1").innerHTML = (`<h2> Mr. Fahad : <u> Its Hot Weather Outside </u> </h2>`);
+            }
+            
+        else
+        {
+            document.querySelector("#res1").innerHTML =(`<h2> Mr. Fahad : <u> Its Extremely Hot Weather Outside </u> </h2>`);
+        }
+        
+    }
+        
+    </script>
+</body>
+</html>
